@@ -1,0 +1,38 @@
+{
+  "name": "lightsb",
+  "version": "1.0.0",
+  "description": "Lightweight simple string builder",
+  "main": "src/main.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start:dev": "nodemon",
+    "start": "npm run build && node build/main.js",
+    "build": "rimraf ./build && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevancorre/lightsb.git"
+  },
+  "keywords": [
+    "NPM",
+    "NodeJS",
+    "TypeScript",
+    "LightWeight",
+    "StringBuilder"
+  ],
+  "author": "Stévan Corre <stevancorre@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevancorre/lightsb/issues"
+  },
+  "homepage": "https://github.com/stevancorre/lightsb#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.14",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}
