@@ -11,9 +11,14 @@ export interface IStringBuilder {
     appendEmptyLine(): IStringBuilder;
     appendEmptyLines(count: number): IStringBuilder;
 
+    setContent(content: any): IStringBuilder;
+    clear(): IStringBuilder;
+
     equals(other: string): boolean;
+    isEmpty(): boolean;
     substring(start: number, end?: number | undefined): string | undefined;
-    getContent(): string | undefined;
+
+    toString(): string | undefined;
 }
 
 export class OutOfRangeError extends Error { }
@@ -85,15 +90,28 @@ export class StringBuilder implements IStringBuilder {
         return this.appendRepeat("\n", count);
     }
 
+    public setContent(content: any): IStringBuilder {
+        return this.clear().append(content);
+    }
+
+    public clear(): IStringBuilder {
+        this.content = undefined;
+        return this;
+    }
+
     public substring(start: number, end?: number | undefined): string | undefined {
         return this.content?.substring(start, end);
+    }
+
+    public isEmpty(): boolean {
+        return this.content == undefined || this.content.length == 0;
     }
 
     public equals(other: string): boolean {
         return this.content == other;
     }
 
-    public getContent(): string | undefined {
+    public toString(): string | undefined {
         return this.content;
     }
 }
