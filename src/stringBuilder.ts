@@ -1,23 +1,95 @@
 export interface IStringBuilder {
+    /**
+     * Sets the string builder's capacity
+     * 
+     * @param capacity The new capacity
+     */
     setCapacity(capacity: number | undefined): IStringBuilder;
 
+    /**
+     * Appends `content`
+     * 
+     * @param content The content to append
+     */
     append(content: any): IStringBuilder;
+
+    /**
+     * Appends `content` `count` times
+     * 
+     * @param content The content to append
+     * @param count How many times you want to append it
+     */
     appendRepeat(content: any, count: number): IStringBuilder;
 
-    appendLine(line: any): IStringBuilder;
-    appendLineRepeat(content: any, count: number): IStringBuilder;
-    appendLines(...lines: any[]): IStringBuilder;
+    /**
+     * Appends `content` as a line
+     * 
+     * @param content The line content
+     */
+    appendLine(content: any): IStringBuilder;
 
+    /**
+     * Appends `content` as lines `count` times
+     * 
+     * @param content The line content
+     * @param count How many times you want to append it
+     */
+    appendLineRepeat(content: any, count: number): IStringBuilder;
+
+    /**
+     * Appends all lines
+     * 
+     * @param contents The lines
+     */
+    appendLines(...contents: any[]): IStringBuilder;
+
+    /**
+     * Appends an empty new line
+     */
     appendEmptyLine(): IStringBuilder;
+
+    /**
+     * Appends `count` empty new lines
+     * 
+     * @param count How many times you want to append it
+     */
     appendEmptyLines(count: number): IStringBuilder;
 
+    /**
+     * Sets the content
+     * 
+     * @param content The content
+     */
     setContent(content: any): IStringBuilder;
+
+    /**
+     * Clears the content (sets to undefined)
+     */
     clear(): IStringBuilder;
 
+    /**
+     * Checks if the content is equal to `other`
+     * 
+     * @param other The string to compare with
+     */
     equals(other: string): boolean;
+
+    /**
+     * Checks if the content is empty
+     */
     isEmpty(): boolean;
+
+    /**
+     * Returns the substring at `start` of length `end` (if provided), else, the rest of the content
+     * 
+     * @param start Start index
+     * @param end Length
+     */
     substring(start: number, end?: number | undefined): string | undefined;
 
+    /**
+     * Return the content as string
+     */
     toString(): string | undefined;
 }
 
@@ -78,8 +150,8 @@ export class StringBuilder implements IStringBuilder {
         return this.appendRepeat(`${content}\n`, count);
     }
 
-    public appendLines(...lines: any[]): IStringBuilder {
-        return this.appendLine(lines.join("\n"));
+    public appendLines(...contents: any[]): IStringBuilder {
+        return this.appendLine(contents.join("\n"));
     }
 
     public appendEmptyLine(): IStringBuilder {
