@@ -1,6 +1,6 @@
 {
   "name": "lightsb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight simple string builder",
   "main": "src/main.ts",
   "directories": {

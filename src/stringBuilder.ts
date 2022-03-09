@@ -119,14 +119,16 @@ export class StringBuilder implements IStringBuilder {
             this.content = "";
         }
 
+        const strContent: string = String(content);
+
         if (this.capacity != undefined) {
-            const newContentSize: number = this.content.length + content.length;
+            const newContentSize: number = this.content.length + strContent.length;
             if (newContentSize > this.capacity) {
                 throw new OutOfRangeError(`Content length is greater than the maximum capacity (${newContentSize}/${this.capacity})`);
             }
         }
 
-        this.content += String(content);
+        this.content += strContent;
         return this;
     }
 
