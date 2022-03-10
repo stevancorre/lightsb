@@ -2,8 +2,6 @@
 
 [![NPM](https://nodei.co/npm/lightsb.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/lightsb/)
 
-[![Known Vulnerabilities](https://snyk.io/test/github/halil/StringBuilder/badge.svg?targetFile=package.json)](https://snyk.io/test/github/halil/StringBuilder?targetFile=package.json)
-
 Light simple string builder for NPM
 
 <br>
