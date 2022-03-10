@@ -6,17 +6,12 @@
         ],
         "allowJs": true,
         "module": "commonJS",
-        "outDir": "build",
+        "outDir": "dist",
         "declaration": true,
-        "rootDir": ".",
         "strict": true,
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "esModuleInterop": true,
     },
-    "exclude": [
-        "examples",
-        "test",
-        "jest.config.js"
-    ]
+    "files": ["src/stringBuilder.ts"]
 }

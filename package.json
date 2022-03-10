@@ -1,20 +1,19 @@
 {
+  "type": "module",
   "name": "lightsb",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Simple light string builder",
-  "main": "build/stringBuilder.js",
-  "types": "build/stringBuilder.d.ts",
+  "main": "dist/stringBuilder.js",
+  "types": "dist/stringBuilder.d.ts",
   "files": [
-    "build/src/stringBuilder.js",
-    "build/src/stringBuilder.d.ts"
+    "dist/stringBuilder.js",
+    "dist/stringBuilder.d.ts"
   ],
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "start:dev": "nodemon",
-    "start": "npm run build && node build/main.js",
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./dist && tsc",
     "test": "jest"
   },
   "repository": {
