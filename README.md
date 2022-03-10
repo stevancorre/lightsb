@@ -64,6 +64,7 @@ const builder: IStringBuilder = new StringBuilder();
 const builder: IStringBuilder = new StringBuilder("content");
 
 // initializes a new string builder with "content" as content and a capacity of 42
+// `capacity` can't be less than 0
 const builder: IStringBuilder = new StringBuilder("content", 42);
 ```
 
@@ -78,6 +79,7 @@ setCapacity(capacity: number | undefined): IStringBuilder;
 ```ts
 // set capacity to 240
 // if the builder was containing something, the overflow is removed
+// `capacity` can't be less than 0
 builder.setCapacity(240);
 
 // remove capacity limit
@@ -109,6 +111,7 @@ appendRepeat(content: any, count: number): IStringBuilder;
 ```ts
 // appends "content" times
 // if the new content exceeds the builder's capacity, throws an `OutOfRangeError`
+// `count` can't be less than 0
 builder.appendRepeat("content", 23);
 ```
 
@@ -137,6 +140,7 @@ appendLineRepeat(content: any, count: number): IStringBuilder;
 ```ts
 // appends "content\n" 4 times
 // if the new content exceeds the builder's capacity, throws an `OutOfRangeError`
+// `count` can't be less than 0
 builder.appendLine("content", 4);
 ```
 
@@ -179,6 +183,7 @@ appendEmptyLines(count: number): IStringBuilder;
 ```ts
 // appends "\n\n\n"
 // if the new content exceeds the builder's capacity, throws an `OutOfRangeError`
+// `count` can't be less than 0
 builder.appendEmptyLines(3);
 ```
 
