@@ -1,12 +1,12 @@
 {
   "name": "lightsb",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple light string builder",
   "main": "build/stringBuilder.js",
   "types": "build/stringBuilder.d.ts",
   "files": [
-    "build/stringBuilder.js",
-    "build/stringBuilder.d.ts"
+    "build/src/stringBuilder.js",
+    "build/src/stringBuilder.d.ts"
   ],
   "directories": {
     "test": "test"
