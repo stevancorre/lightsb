@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/lightsb.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/lightsb/)
 
-Light simple string builder for NPM
+Light simple TypeScript string builder
 
 <br>
 
