@@ -12,6 +12,14 @@ describe("# initialize", () => {
 
         expect(builder.toString()).toEqual("content");
     });
+
+    it("should not initialize", () => {
+        expect(() => new StringBuilder("content", -1)).toThrow("`capacity` should not be less than 0.");
+    });
+
+    it("should not initialize", () => {
+        expect(() => new StringBuilder("content", 6)).toThrow(new OutOfRangeError("Content length is greater than the maximum capacity (7/6)"));
+    });
 });
 
 describe("# append", () => {
