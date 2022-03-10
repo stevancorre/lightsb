@@ -96,9 +96,18 @@ export interface IStringBuilder {
 export class OutOfRangeError extends Error { }
 
 export class StringBuilder implements IStringBuilder {
-    public constructor(
-        private content?: string,
-        private capacity?: number) { }
+    protected content: string | undefined;
+    protected capacity: number | undefined;
+
+    public constructor(content?: string, capacity?: number) {
+        if (capacity != undefined && capacity < 0) {
+            throw new Error("`capacity` should not be less than 0.");
+        }
+
+        this.capacity = capacity;
+
+        this.append(content);
+    }
 
     public setCapacity(capacity: number | undefined): IStringBuilder {
         if (capacity != undefined && capacity < 0) {
@@ -115,6 +124,10 @@ export class StringBuilder implements IStringBuilder {
     }
 
     public append(content: any): IStringBuilder {
+        if (!content) {
+            return this;
+        }
+
         if (this.content == undefined) {
             this.content = "";
         }
