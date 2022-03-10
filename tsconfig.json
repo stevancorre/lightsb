@@ -5,11 +5,18 @@
             "es6"
         ],
         "allowJs": true,
+        "module": "commonJS",
         "outDir": "build",
+        "declaration": true,
         "rootDir": ".",
         "strict": true,
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+    },
+    "exclude": [
+        "examples",
+        "test",
+        "jest.config.js"
+    ]
 }
