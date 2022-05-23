@@ -1,7 +1,6 @@
 {
-  "type": "module",
   "name": "lightsb",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Simple light string builder",
   "main": "dist/stringBuilder.js",
   "types": "dist/stringBuilder.d.ts",
