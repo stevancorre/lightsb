@@ -1,6 +1,6 @@
 <h1 align="center">
     <br>
-    <a href="">
+    <a href="https://github.com/stevancorre/lightsb">
         <img src="https://i.imgur.com/6DeIvOH.png" alt="Light String Builder icon" width="200">
     </a>
     <br>
@@ -27,7 +27,7 @@
 
 <p align="center">
     <a href="#📥-download">Download</a> •
-    <a href="https://stevancorre.github.io/stevancorre/lightsb">Documentation</a> •
+    <a href="https://stevancorre.github.io/lightsb">Documentation</a> •
     <a href="#🏃-quick-start">Quick start</a> •
     <a href="#👑-credits">Credits</a> •
     <a href="#📝-license">License</a>
